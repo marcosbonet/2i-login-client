@@ -57,6 +57,21 @@ Esto abrirá el cliente en tu navegador predeterminado en http://localhost:3000.
         App.tsx: Componente principal de la aplicación.
         index.tsx: Punto de entrada de la aplicación.
 
+## Video de Demostración
+
+Puedes ver una demostración de cómo funciona el proyecto en este video:
+
+<video width="320" height="240" controls>
+  <source src="public/2i-login.webm" type="video/webm">
+  Tu navegador no soporta el video.
+</video>
+
+## Vistas
+
+![register](register.png)
+![profile](profile.png)
+![login](login.png)
+
 ## Notas adicionales
 
     Asegúrate de tener el servidor backend en ejecución para poder interactuar con la aplicación cliente.

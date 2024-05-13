@@ -4,14 +4,13 @@ import { userTypes } from "../types/types";
 
 type State = {
   token: string;
-  profile: userTypes[];
+  profile: userTypes;
   isAuth: boolean;
-  register: userTypes;
 };
 
 type Actions = {
   setToken: (token: string) => void;
-  setProfile: (profile: userTypes[]) => void;
+  setProfile: (profile: userTypes) => void;
   logout: () => void;
 };
 
@@ -19,10 +18,7 @@ export const useAuthStore = create(
   persist<State & Actions>(
     (set) => ({
       token: "",
-      profile: [],
-      isAuth: false,
-      register: {
-        id: "",
+      profile: {
         nickname: "",
         nombre: "",
         apellido: "",
@@ -30,13 +26,15 @@ export const useAuthStore = create(
         password: "",
         email: "",
       },
+      isAuth: false,
+
       setToken: (token: string) =>
         set((state) => ({
           ...state,
           token,
           isAuth: true,
         })),
-      setProfile: (profile: userTypes[]) =>
+      setProfile: (profile: userTypes) =>
         set((state) => ({
           ...state,
           profile,
@@ -45,7 +43,14 @@ export const useAuthStore = create(
         set((state) => ({
           ...state,
           token: "",
-          profile: [],
+          profile: {
+            nickname: "",
+            nombre: "",
+            apellido: "",
+            direccion: "",
+            password: "",
+            email: "",
+          },
           isAuth: false,
         })),
     }),

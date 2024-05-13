@@ -1,5 +1,4 @@
 export type userTypes = {
-  id: string;
   nickname: string;
   nombre: string;
   apellido: string;

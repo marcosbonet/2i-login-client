@@ -16,7 +16,7 @@ export function Login() {
     setToken(restLogin.data.token);
     const resProfile = await profileRequest();
 
-    setProfile(resProfile.data.rows);
+    setProfile(resProfile.data);
     navigate("/profile");
   };
 
