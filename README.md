@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+### Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el cliente de la aplicación, desarrollado con React y TypeScript.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1- Clona el repositorio:
 
-## Expanding the ESLint configuration
+git clone https://github.com/marcosbonet/2i-login-client
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2- Navega al directorio del cliente:
 
-- Configure the top-level `parserOptions` property like this:
+cd client
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3- Instala las dependencias:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    npm install
+
+## Scripts disponibles
+
+- dev: Inicia el servidor de desarrollo Vite.
+- build: Compila el proyecto para producción.
+- lint: Ejecuta ESLint para buscar y corregir problemas de código.
+- preview: Previsualiza el proyecto compilado antes de implementarlo.
+
+## Uso
+
+Para ejecutar el cliente en modo de desarrollo, utiliza el siguiente comando:
+
+npm run dev
+
+Esto abrirá el cliente en tu navegador predeterminado en http://localhost:3000.
+
+## Dependencias principales
+
+    axios: Cliente HTTP para realizar solicitudes al servidor.
+    formik: Biblioteca para crear formularios en React de forma sencilla.
+    react: Biblioteca principal de React para crear interfaces de usuario.
+    react-dom: Renderizador de React para el DOM.
+    react-router-dom: Enrutador para la navegación entre páginas en la aplicación React.
+    yup: Biblioteca para realizar validaciones de formularios.
+
+## Dependencias de desarrollo
+
+    eslint: Herramienta para identificar y reportar patrones en el código JavaScript/TypeScript.
+    typescript: Superset de JavaScript que añade tipado estático al lenguaje.
+    vite: Herramienta de construcción rápida para proyectos web modernos.
+
+## Estructura del proyecto
+
+    src/: Contiene los archivos fuente del proyecto.
+        api/: Contiene las funciones para realizar solicitudes al servidor.
+        components/: Componentes reutilizables de la aplicación.
+        pages/: Páginas principales de la aplicación.
+        store/: Contiene el estado global de la aplicación gestionado con Zustand.
+        styles/: Estilos globales y archivos de estilos de la aplicación.
+        App.tsx: Componente principal de la aplicación.
+        index.tsx: Punto de entrada de la aplicación.
+
+## Notas adicionales
+
+    Asegúrate de tener el servidor backend en ejecución para poder interactuar con la aplicación cliente.
